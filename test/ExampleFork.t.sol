@@ -13,7 +13,7 @@ contract ExampleForkTest is Test {
     IExample private setNumberC;
 
     function setUp() public {
-        from = address(0x35f87784b19F3C78809F105E0d308304C458933e);
+        from = vm.envAddress("FROM");
 
         doNothingC = IExample(0x66363aF11c748aD4882c49cfE42202E3E473B64B);
         setToZeroC = IExample(0x8267b6D93Eab4aa1F638Da1a5E91e4359312bE33);
